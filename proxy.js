@@ -10,9 +10,9 @@ if (!fs.existsSync(path)) {
 
     const defaultConfig = {
         accountname: "Steve",
-        host: "localhost",
-        proxyhost: "localhost",
-        ports: 25565,
+        host: "mc.hypixel.net",
+        proxyhost: "127.0.0.1",
+        port: 25565,
         version: "1.16.5"
     };
 
@@ -34,7 +34,7 @@ const banner = `
 ██╔████╔██║██║██║░░██║░╚███╔╝░░╚████╔╝░      Original thread: https://yougame.biz/threads/304120/
 ██║╚██╔╝██║██║██║░░██║░██╔██╗░░░╚██╔╝░░      Telegram: @bredcookie
 ██║░╚═╝░██║██║╚█████╔╝██╔╝╚██╗░░░██║░░░      Made with love ♡
-╚═╝░░░░░╚═╝╚═╝░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░      Remake by dest4590
+╚═╝░░░░░╚═╝╚═╝░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░      >> Remake by dest4590 <<
 \x1b[0m
 `;
 console.log(banner);
@@ -47,7 +47,7 @@ const proxyClient = createClient({
     username: config.accountname,
     auth: "offline",
     host: config.host,
-    port: config.ports,
+    port: config.port,
     keepAlive: true,
     version: config.version,
     hideErrors: true,
@@ -83,7 +83,7 @@ logger.server("Creating server...");
 const proxyServer = createServer({
     "online-mode": false,
     host: config.proxyhost,
-    port: config.ports,
+    port: config.port,
     keepAlive: false,
     version: config.version,
     motd: 'free proxies here'
@@ -92,7 +92,7 @@ const proxyServer = createServer({
 logger.server("Server created!");
 logger.info("All system working!");
 logger.info("Waiting for connections!");
-logger.info(`Connect to \x1b[36m${config.proxyhost}:${config.ports}\x1b[0m`);
+logger.info(`Connect to \x1b[36m${config.proxyhost}:${config.port}\x1b[0m`);
 
 proxyServer.on("login", (client) => {
     logger.client(`${client.username} has connected`);
