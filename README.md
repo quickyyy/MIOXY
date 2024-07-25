@@ -34,7 +34,4 @@ Cкачиваем архив в любую удобную для нас папк
     version: версия на которой будете играть
 
 ## 🔗 Links
-
-[![telegram](https://img.shields.io/badge/Мой%20Телеграм%20Блог-0099cc)](https://t.me/bredcookie)
-
 [Recode author github](https://github.com/dest4590)
