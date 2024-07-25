@@ -1,5 +1,3 @@
-[![telegram](https://img.shields.io/badge/Мой%20Телеграм%20Блог-0099cc)](https://t.me/bredcookie)
-
 ## Description
 
     Mioxy позволяет возможным заходить на один и тот же сервер, на один и тот же аккаунт,
